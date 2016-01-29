@@ -92,3 +92,4 @@ This bundle is dual-licensed under MIT and GPL licenses.
 * [http://www.gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html)
 
 Use it, change it, fork it, sell it. Do whatever you want, but please leave the author attribution.
+ 
