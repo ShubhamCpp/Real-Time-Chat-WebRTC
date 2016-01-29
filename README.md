@@ -41,9 +41,10 @@ Then clone this repository using `git clone <git repo URL>`.
 2. Using the Command Prompt in Windows or Terminal in Linux or MacOS :
 
 ` node server.js `
+
 3. This will make a local https Server.
 
-Note :- WebRTC now works only on https. http is no longer supported.
+Note :- WebRTC now works only on HTTPS. HTTP is no longer supported.
 The Certificates are in the HTTPS_Permissions Folder. However, these are not fully supported. 
 You will be able to host the Server. However, the Browser will give you a Warning saying that the Certificates are invalid.
 Proceed if you are on LAN and testing it out.
@@ -51,9 +52,9 @@ For Web Hosting please buy a proper https domain.
 
 ### Video Chatting
 
-1. Once the Server is up and running, Go to your ip@port 3000.
-In my case :- 192.168.1.12:3000
-If you are on the PC where the Server is hosted you can also visit :- 127.0.0.1:3000
+1. Once the Server is up and running, Go to your https://ip@port 3000.
+In my case :- https://192.168.1.12:3000 (http will not work)
+If you are on the PC where the Server is hosted you can also visit :- https://127.0.0.1:3000
 Note: You might get the Invalid Certificate Warning I talked about earlier. Just Proceed if you're just testing it out or are on LAN.
 
 2. Enter your Name.
@@ -74,11 +75,13 @@ Note: You might get the Invalid Certificate Warning I talked about earlier. Just
 # Author
 
 - Shubham Chopra 
+
     Github Link :- [ShubhamCpp](https://github.com/ShubhamCpp)
 
 ## Contact
 
 For any further queries contact me on my email :- shubham.chopra2906@gmail.com
+
 Also, Feel Free to commit, very much Appreciated.
 
 ## License
