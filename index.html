@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Video Chat using socket.io" content="">
+    <meta name="author" content="Shubham Chopra">
+
+    <!-- <script src="//api.turnservers.com/api.js?key=API-Key"></script> -->
+
+    <title>Video Chat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Video Chat</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" >
+                    <div class="form-group">
+                        <input type="text" name="userId" id="userId" placeholder="User" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="roomId" id="roomId" placeholder="Room" class="form-control">
+                    </div>
+                    <input type="button" id="startButton" class="btn btn-success" value="Join"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="row ">
+
+
+            <div class="col-md-8" >
+                <div class="row">
+                    <img src="images/remote.png" id="remoteimg" class="img-responsive"/>
+                    <video id='remoteVideo' autoplay width="100%" class="remote"></video>
+                </div>
+            </div>
+            <div class="col-md-4 local" >
+                <div class="row">
+                    <img src="images/local.png" id="localimg" class="img-responsive"/>
+                    <video id='localVideo' autoplay muted width="100%" ></video>
+                </div>
+                <div class="row">
+
+                    <div id="chat" class="txtarea fullsz"></div>
+                    <input type="text" id="msg" placeholder="Press enter to send message" class="fullsz form-control"/>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <i class="fa fa-github"></i><a href="https://github.com/Hironate/PeerChat" target="_blank"> Fork Me on Github</a>
+        </footer>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Application Specific Javascripts -->
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='js/adapter.js'></script>
+    <script src='js/main.js'></script>
+
+</body>
+</html>
